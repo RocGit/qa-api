@@ -1,0 +1,23 @@
+{
+  "name": "qa-api",
+  "version": "1.0.0",
+  "description": "qa-api WQ!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocGit/qa-api.git"
+  },
+  "keywords": [
+    "serverless",
+    "dynamodb"
+  ],
+  "author": "roc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RocGit/qa-api/issues"
+  },
+  "homepage": "https://github.com/RocGit/qa-api#readme"
+}
