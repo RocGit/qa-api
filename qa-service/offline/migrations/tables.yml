@@ -1,0 +1,32 @@
+moviesTable:
+  Type: AWS::DynamoDB::Table
+  DeletionPolicy : Retain
+  Properties:
+    TableName: ${self:custom.DB_PREFIX}-movies
+    AttributeDefinitions:
+      - AttributeName: year
+        AttributeType: N
+      - AttributeName: title
+        AttributeType: S
+    KeySchema:
+      - AttributeName: year
+        KeyType: HASH
+      - AttributeName: title
+        KeyType: RANGE
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
+todosTable:
+  Type: AWS::DynamoDB::Table
+  DeletionPolicy : Retain
+  Properties:
+    TableName: ${self:custom.DB_PREFIX}-todos
+    AttributeDefinitions:
+      - AttributeName: id
+        AttributeType: S
+    KeySchema:
+      - AttributeName: id
+        KeyType: HASH
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1
