@@ -4,6 +4,7 @@
   "description": "qa-service for api",
   "main": "handler.js",
   "scripts": {
+    "start": "sls offline start ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Roc",

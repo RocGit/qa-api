@@ -48,7 +48,28 @@ serverless dynamodb install (sls dynamodb install)
 > the dynamodb package will installed in the same path .dynamodb
 > see node_modules\serverless-dynamodb-local\index.js line:16 
 > `localPath: serverless.config && path.join(serverless.config.servicePath, '.dynamodb')`
+> in the `serverless.yml` maybe like :
+> ```yml
+> custom:
+>   dynamodb:  
+>     start:
+>       ......
+>     install:
+>       localPath: ./.dynamodb
+>         ......
+> ```
 
 #### In your project root run:
 
 `serverless offline start or sls offline start`
+
+#### modify the port of serverless offline in `serverless.yml`
+```yml
+custom:
+  serverless-offline:
+    port: 4000
+  dynamodb:  
+    start:
+      ......
+```
+> serverless-offline's option must before the dynamodb'option in `serverless.yml`

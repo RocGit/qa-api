@@ -84,6 +84,11 @@ plugins:
 custom:
   stage: ${opt:stage, self:provider.stage}
   DB_PREFIX: ${file(./config.yml):${self:custom.stage}.DB_PREFIX}
+
+  serverless-offline:
+    # httpsProtocol: "dev-certs"
+    port: 3001
+
   dynamodb:  
     start:
       port: 8001
@@ -99,10 +104,6 @@ custom:
           #   sources: [./offline/migrations/moviedata.json]
           # - table: ${self:custom.DB_PREFIX}-todos
           #   sources: [./offline/migrations/todo-seed.json]
-
-# serverless-offline:
-    # httpsProtocol: "dev-certs"
-    # port: 4000
 
 
 functions:
